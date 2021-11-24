@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="/css/home.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=locals.title%></title>
+</head>
+
+<body>
+    <!-- spellcheck is used along with input to check if the user typing right -->
+    <div id="toggle">
+        <div id="toggle-button"></div>
+    </div>
+    <container>
+        <h1 id="page-heading">TO DO APP</h1>
+        <form action="create-contact" method="post" id="add-task">
+            <input type="text" name="task" placeholder="Description" spellcheck="true" id="decription" required>
+
+            <select name="category" id="category" required>
+                <option value="" disabled selected hidden>Choose a category</option>
+                <option class="work">Work</option>
+                <option class="school">School</option>
+                <option class="personal">Personal</option>
+                <option class="cleaning">Cleaning</option>
+                <option class="other">Other</option>
+
+
+            </select>
+            <input type="date"  name="date" value="dd-mm-yyyy" id="date" required>
+        </form>
+        <br>
+        <a href="/create-contact">
+            <button type="submit" id="add-color" form="add-task" class="task-btns add"><i class="fas fa-plus"></i>ADD TASK</button>
+        </a>
+
+
+        <button type="submit" form="delete-task" class="task-btns delete"><i class="far fa-trash-alt"></i>DELETE
+            TASKS</button>
+        
+        <form action="/delete-task" method="get" id="delete-task">
+
+        <section id="color-change">
+
+        <div id="task-container">
+            
+            <%for( let i of tasks_list){%>
+                     <div class="row color">
+                        <div class="column">
+                            <div class="card">
+                                
+                                <h2 class="tasks"><input type="checkbox" name="<%=i.id%>" id="checkbox">
+                                    <%=i.task%>
+                                </h2>
+                                <h3 >
+                                <button type="button" class="<%=i.category %>"><%= i.category %></button>
+                            </h3> 
+                            </div>
+                            <h3 class="dates" ><i class="fas fa-calendar-alt"></i>
+                                <%=i.date%></h3>
+                        </div>
+                        
+                        </div>
+
+                <%}%>
+           
+        </div>
+    </section>
+</form>
+    </container>
+</body>
+<script src="js/home.js"></script>
+</html>

@@ -1,0 +1,201 @@
+
+body{
+   margin:0;
+   text-align: center;
+   /* background-color: #DFDBE5;
+   background-color: #c0bbc9; */
+   background: radial-gradient(ellipse farthest-side at 76% 77%, rgba(245, 228, 212, 0.25) 4%, rgba(255, 255, 255, 0) calc(4% + 1px)), radial-gradient(circle at 76% 40%, #fef6ec 4%, rgba(255, 255, 255, 0) 4.18%), linear-gradient(135deg, #ff0000 0%, #000036 100%), radial-gradient(ellipse at 28% 0%, #ffcfac 0%, rgba(98, 149, 144, 0.5) 100%), linear-gradient(180deg, #cd6e8a 0%, #f5eab0 69%, #d6c8a2 70%, #a2758d 100%); background-blend-mode: normal, normal, screen, overlay, normal; 
+} 
+ .toggle-bck{
+    background: radial-gradient(100% 225% at 0% 0%, #DE3E3E 0%, #17115C 100%), radial-gradient(100% 225% at 100% 0%, #FF9040 0%, #FF0000 100%), linear-gradient(180deg, #CE63B7 0%, #ED6283 100%), radial-gradient(100% 120% at 75% 0%, #A74600 0%, #000000 100%), linear-gradient(310deg, #0063D8 0%, #16009A 50%);
+    background-blend-mode: overlay, color-dodge, color-burn, color-dodge, normal;
+ }
+.white-color{
+color: white;
+}
+/* for javasrcipt file */
+.white-btn-color{
+    color: rgb(255, 250, 250);
+/* for javasrcipt file */
+}
+.bck-color-grey{
+
+    background-color: "darkslategrey";
+}
+#checkbox{
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+}
+/* for javasrcipt file */
+#toggle{
+    width:100px;
+    height: 20px;
+    border: 2px solid black;
+    margin: auto;
+    border-radius: 30px;
+}
+/* for javasrcipt file */
+#toggle-button{
+    width:20px;
+    height: 20px;
+    cursor: pointer;
+    background-color: black;
+    border-radius: 30px;
+    transition: 1s all;
+   
+}
+#page-heading{
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+}
+/* task list border */
+.column{
+    border-radius: 20px;
+     border:2px solid rgb(0, 0, 0); 
+     border-bottom: dashed ;
+     border-top: dashed;
+     border-left: none;
+    
+}
+.col-color{
+    background-color: whitesmoke;
+
+}
+/* the whole structure of a task added is handled here */
+.card{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    }
+    /* handling the design of the category added to the list */
+.categories{
+height: 40px;
+width: 60px;
+background-color: #9fa4c4;
+/* background-image: linear-gradient(315deg, #9fa4c4 0%, #9e768f 74%); */
+border-radius: 5px;
+padding-top: 20px;
+margin-top: 20px;
+min-width: 20%;
+
+}
+.cate{
+    background-color: rgb(92, 151, 110);
+}
+/* css for column where we write the task we need to add */
+#decription{
+    width: 80%;
+    height: 80px;
+    display: block;
+    align-items: center;
+    margin-left: 10%;
+
+}
+#decription:hover{
+    background-color: rgb(236, 235, 235);
+    border-radius: 30px;
+}
+#category{
+    display: inline-block;
+    width: 50%;
+    height:70px;
+}
+#category:hover{
+    background-color: rgb(236, 235, 235);
+    border-radius: 30px;
+
+}
+#date{
+    display: inline-block;
+    width: 40%;
+    height:70px;
+}
+#date:hover{
+    background-color: rgb(236, 235, 235);
+    border-radius: 30px;
+}
+.dates{
+    padding-right:87%;
+   
+}
+
+.task-btns{
+    height: 50px;
+    width:130px;
+    color: white;
+    cursor: pointer;
+}
+.add{
+    height: 60px;
+
+    background-color: rgba(20, 9, 7, 0.712);
+}
+.add:hover{
+    background-color:slategray;
+}
+.delete{
+   
+    height: 60px;
+    background-color: rgb(207, 16, 16);
+}
+.delete:hover{
+    background-color: rgb(226, 44, 44);
+}
+#task-container{
+   margin: 0 10px;
+    margin-top: 10px;
+}
+/* color of buttons on the basis of category */
+.Personal{
+    background-color: rgb(119, 64, 146);
+
+    /* margin-left: 50%; */
+    height:70px;
+    width:150px;
+    margin-right: 50px;
+    color: white;
+    font-size: 25px;
+    font-family:monospace;
+}
+
+.Work{
+    background-color: #111173;
+    height:70px;
+    width:150px;
+    font-family:monospace;
+    margin-right: 50px;
+    color: white;
+    font-size: 25px;
+}
+
+.School{
+    background-color: #0a6060;
+    height:70px;
+    width:150px;
+    font-family:monospace;
+    margin-right: 50px;
+    color: white;
+    font-size: 25px;
+}
+
+.Cleaning{
+    background-color: rgb(31, 30, 30);
+    height:70px;
+    width:150px;
+    font-family:monospace;
+    margin-right: 50px;
+    color: white;
+    font-size: 25px;
+}
+
+.Other{
+    background-color: orange;
+    height:70px;
+    width:150px;
+    font-family:monospace;
+    margin-right: 50px;
+    color: white;
+    font-size: 25px;
+}
